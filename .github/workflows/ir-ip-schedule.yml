@@ -1,0 +1,47 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Run IP Generator Script
+
+# Controls when the workflow will run
+on:
+  schedule:
+    - cron: "0 0 25 * *"
+  # Triggers the workflow on push or pull request events but only for the "main" branch
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  run-script:
+    runs-on: ubuntu-latest
+    steps:
+      # Checkout the repository
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      # Ensure wget is installed
+      - name: Install Dependencies
+        run: sudo apt-get update && sudo apt-get install -y wget
+
+      # Set execute permission for the script
+      - name: Make Script Executable
+        run: chmod +x ./ip-generator.sh
+
+      # Run the script for "IR"
+      - name: Run the Script for IR
+        run: ./ip-generator.sh IR
+
+      # Verify Output Files
+      - name: Verify Output Files
+        run: test -f IR_ip_prefixes.txt && test -f IR_address_list.rsc
+
+      # Archive the generated files
+      - name: Upload Artifacts
+        uses: actions/upload-artifact@v3
+        with:
+          name: Generated-Files
+          path: |
+            IR_ip_prefixes.txt
+            IR_address_list.rsc
+          retention-days: 30
