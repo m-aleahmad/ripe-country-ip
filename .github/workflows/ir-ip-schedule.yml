@@ -18,7 +18,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout Repository
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       # Ensure wget is installed
       - name: Install Dependencies
@@ -38,7 +38,7 @@ jobs:
 
       # Archive the generated files
       - name: Upload Artifacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: Generated-Files
           path: |
