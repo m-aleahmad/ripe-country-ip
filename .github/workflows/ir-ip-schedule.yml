@@ -1,17 +1,10 @@
-# This is a basic workflow to help you get started with Actions
-
 name: Run IP Generator Script
 
-# Controls when the workflow will run
 on:
   schedule:
-    - cron: "0 0 25 * *"
-  # Triggers the workflow on push or pull request events but only for the "main" branch
-
-  # Allows you to run this workflow manually from the Actions tab
+    - cron: "0 0 25 * *" # Run on the 25th of every month at 00:00 UTC
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   run-script:
     runs-on: ubuntu-latest
@@ -36,7 +29,18 @@ jobs:
       - name: Verify Output Files
         run: test -f IR_ip_prefixes.txt && test -f IR_address_list.rsc
 
-      # Archive the generated files
+      # Commit and push changes back to the repository
+      - name: Commit and Push Changes
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          git add IR_ip_prefixes.txt IR_address_list.rsc
+          git diff --cached --quiet || git commit -m "Update generated files for IR"
+          git push
+
+      # Archive the generated files (optional)
       - name: Upload Artifacts
         uses: actions/upload-artifact@v4
         with:
