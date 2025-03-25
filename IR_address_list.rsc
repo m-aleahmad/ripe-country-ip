@@ -154,10 +154,8 @@ add address=45.8.160.0/22 list=IR
 add address=45.9.144.0/22 list=IR
 add address=45.9.252.0/22 list=IR
 add address=45.11.184.0/22 list=IR
-add address=45.11.188.0/22 list=IR
 add address=45.15.200.0/22 list=IR
 add address=45.15.248.0/22 list=IR
-add address=45.65.112.0/22 list=IR
 add address=45.81.16.0/22 list=IR
 add address=45.82.136.0/22 list=IR
 add address=45.84.156.0/22 list=IR
@@ -200,7 +198,6 @@ add address=45.148.248.0/22 list=IR
 add address=45.149.76.0/22 list=IR
 add address=45.150.88.0/22 list=IR
 add address=45.150.150.0/24 list=IR
-add address=45.154.156.0/22 list=IR
 add address=45.155.192.0/22 list=IR
 add address=45.156.116.0/22 list=IR
 add address=45.156.180.0/22 list=IR
@@ -213,6 +210,7 @@ add address=45.158.120.0/22 list=IR
 add address=45.159.112.0/22 list=IR
 add address=45.159.148.0/22 list=IR
 add address=45.159.196.0/22 list=IR
+add address=45.248.164.0/22 list=IR
 add address=46.18.248.0/21 list=IR
 add address=46.21.80.0/20 list=IR
 add address=46.28.72.0/21 list=IR
@@ -718,6 +716,7 @@ add address=103.132.228.0/23 list=IR
 add address=103.140.128.0/23 list=IR
 add address=103.215.220.0/22 list=IR
 add address=103.216.60.0/22 list=IR
+add address=103.217.124.0/22 list=IR
 add address=103.231.136.0/22 list=IR
 add address=109.70.73.0/24 list=IR
 add address=109.70.74.0/24 list=IR
@@ -784,7 +783,10 @@ add address=146.66.132.0/23 list=IR
 add address=146.66.134.0/23 list=IR
 add address=151.232.0.0/14 list=IR
 add address=151.238.0.0/15 list=IR
-add address=151.246.0.0/15 list=IR
+add address=151.246.0.0/16 list=IR
+add address=151.247.0.0/18 list=IR
+add address=151.247.96.0/19 list=IR
+add address=151.247.128.0/17 list=IR
 add address=152.89.12.0/22 list=IR
 add address=152.89.44.0/22 list=IR
 add address=158.58.0.0/17 list=IR
@@ -983,7 +985,6 @@ add address=185.83.182.0/24 list=IR
 add address=185.83.183.0/24 list=IR
 add address=185.83.184.0/22 list=IR
 add address=185.83.196.0/22 list=IR
-add address=185.83.200.0/22 list=IR
 add address=185.83.208.0/22 list=IR
 add address=185.84.156.0/24 list=IR
 add address=185.84.157.0/24 list=IR
@@ -1441,6 +1442,7 @@ add address=188.0.248.0/21 list=IR
 add address=188.75.64.0/18 list=IR
 add address=188.94.188.0/24 list=IR
 add address=188.95.89.0/24 list=IR
+add address=188.95.198.0/24 list=IR
 add address=188.118.64.0/18 list=IR
 add address=188.121.96.0/19 list=IR
 add address=188.121.128.0/19 list=IR
@@ -1468,7 +1470,6 @@ add address=188.209.16.0/20 list=IR
 add address=188.209.32.0/20 list=IR
 add address=188.209.64.0/20 list=IR
 add address=188.209.116.0/22 list=IR
-add address=188.209.128.0/20 list=IR
 add address=188.209.152.0/23 list=IR
 add address=188.209.192.0/20 list=IR
 add address=188.210.64.0/20 list=IR
@@ -1545,6 +1546,7 @@ add address=193.56.59.0/24 list=IR
 add address=193.56.61.0/24 list=IR
 add address=193.56.107.0/24 list=IR
 add address=193.56.118.0/24 list=IR
+add address=193.84.255.0/24 list=IR
 add address=193.93.182.0/24 list=IR
 add address=193.104.29.0/24 list=IR
 add address=193.105.234.0/24 list=IR
@@ -1591,7 +1593,6 @@ add address=194.5.195.0/24 list=IR
 add address=194.5.205.0/24 list=IR
 add address=194.9.56.0/23 list=IR
 add address=194.9.80.0/23 list=IR
-add address=194.15.96.0/22 list=IR
 add address=194.26.117.0/24 list=IR
 add address=194.26.195.0/24 list=IR
 add address=194.29.79.0/24 list=IR
@@ -1665,6 +1666,7 @@ add address=195.96.153.0/24 list=IR
 add address=195.110.38.0/23 list=IR
 add address=195.114.4.0/23 list=IR
 add address=195.114.8.0/23 list=IR
+add address=195.137.167.0/24 list=IR
 add address=195.146.32.0/19 list=IR
 add address=195.158.230.0/24 list=IR
 add address=195.177.255.0/24 list=IR
@@ -1752,7 +1754,8 @@ add address=217.218.0.0/15 list=IR
 add address=31.130.176.0/20 list=IR
 add address=46.148.32.0/20 list=IR
 add address=81.163.0.0/21 list=IR
-add address=88.135.32.0/22 list=IR
+add address=88.135.32.0/24 list=IR
+add address=88.135.33.0/23 list=IR
 add address=88.135.40.0/21 list=IR
 add address=91.207.138.0/23 list=IR
 add address=91.208.165.0/24 list=IR
